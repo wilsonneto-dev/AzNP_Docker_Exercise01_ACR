@@ -24,6 +24,6 @@ jobs:
       run: |
         cd SiteContagem
         docker build . --file Dockerfile --tag aznpregistry/${{ secrets.NOME_IMAGEM }}:$GITHUB_RUN_NUMBER
-        docker tag aznpregistry/${{ secrets.NOME_IMAGEM }}:$GITHUB_RUN_NUMBER ${{ secrets.DOCKER_USERNAME }}/${{ secrets.NOME_IMAGEM }}:latest
+        docker tag aznpregistry/${{ secrets.NOME_IMAGEM }}:$GITHUB_RUN_NUMBER aznpregistry/${{ secrets.NOME_IMAGEM }}:latest
         docker push aznpregistry/${{ secrets.NOME_IMAGEM }}
         
