@@ -34,7 +34,7 @@ jobs:
         
     - name: Azure WebApp Container - Deployment da Aplicacao
       env:
-        WEB_APP: anp-${{ env.IDENTIFICACAO_ALUNO }} 
+        WEB_APP: ${{ env.WEB_APP }} 
         IMAGEM_DEPLOYMENT: ${{ secrets.NOME_IMAGEM }}:latest
       uses: Azure/webapps-container-deploy@v1
       with:
